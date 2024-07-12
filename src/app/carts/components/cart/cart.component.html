@@ -1,0 +1,71 @@
+
+
+<button type="button" class="btn btn-success creat" routerLink="/creat">Creat Product</button>
+
+<div class="cart">
+  <div class="container">
+    <div class="content_cart_header">
+      <h1>Shopping Cart</h1>
+      <p>you have <span class="text-danger">{{cartProducts.length}} </span>in your carts</p>
+    </div>
+    <div class="clear">
+      <button (click)="ClearAllProduct()" type="button" class="btn btn-outline-danger">Clear Shopping
+        Cart</button>
+    </div>
+    <div class="content_cart">
+      <div class="d-flex justify-content-around">
+        <h6>Name</h6>
+        <h6>price</h6>
+        <h6>Quanuty</h6>
+        <h6>Total</h6>
+      </div>
+
+      <div class="d-flex justify-content-around action_cart" *ngFor="let item of cartProducts let index=index ">
+        <img [src]="item.image" alt="" />
+        <p class="title_cart">{{item.title}}</p>
+        <div class="d-flex align-items-center action">
+          <button (click)="decreseAmount(index)">-</button>
+          <input (change)="detactedinput()" [(ngModel)]="item.amount" type="number" />
+          <button (click)="increseAmount(index)">+</button>
+        </div>
+        <p class="price">{{item.price * item.amount}} LE</p>
+        <button type="button" (click)="DeleteProduct(index)" class="btn btn-danger">Delete</button>
+        <!-- <button type="button" (click)="DeleteProduct(index)" class="btn btn-danger">Update</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="total container">
+    <span>Total <span class="price">{{total}} LE</span></span>
+    <button type="button" class="btn btn-success" (click)="orderNow()">Order Now</button>
+  </div>
+  <p *ngIf="success" class="order">Well done your Order is successful Send</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

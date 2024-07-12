@@ -1,0 +1,33 @@
+.creat_form {
+    margin-top: 100px;
+}
+
+.creat_form h5 {
+    margin-top: 20px;
+}
+
+.creat_form input {
+    margin-top: 20px;
+}
+
+textarea {
+    display: block;
+    width:100%;
+}
+
+input[type="file"]{
+display: none;
+}
+
+label{
+    margin-top: 30px;
+}
+
+.upload_img{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+}

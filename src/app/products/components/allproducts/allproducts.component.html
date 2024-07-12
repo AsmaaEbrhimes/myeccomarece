@@ -1,0 +1,36 @@
+<div class="row mt-4">
+  <select class="form-control" (change)="FilterCategory($event)">
+    <option value="all" selected>All</option>
+    <option value="{{cat}}" *ngFor="let cat of categories">{{cat}}</option>
+  </select>
+</div>
+
+
+<div class="row" *ngIf="!loding">
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-4 col-xl-3" style="margin-top:100px" *ngFor="let item of products">
+      <div class="card">
+        <div routerLink="/details/{{item.id}}">
+          <img [src]="item.image" alt="Product Image" />
+          <h5>{{item.title}}</h5>
+          <p>{{item.description}}</p>
+        </div>
+        
+        <div class="btnAction">
+          <div *ngIf="!item.addbutton" (click)="toggleAddButton(item)">
+            <button type="button" class="btn btn-success">Add To Cart</button>
+            <span>{{item.price}}</span>
+          </div>
+          <div class="w-10 d-flex" *ngIf="item.addbutton">
+            <input [(ngModel)]="item.amount"  class="input" type="number" />
+            <button class="btn btn-danger" (click)="AddToCart(item)">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center w-100" *ngIf="loding">
+  <app-spenner></app-spenner>
+</div>

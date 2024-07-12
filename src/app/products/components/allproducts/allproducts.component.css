@@ -1,0 +1,50 @@
+.card {
+    position: relative;
+    min-height: calc(100% + 5%);
+    padding: 10px;
+    box-shadow: 0 0 10px salmon;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    margin-bottom: 20px;
+    transition: 0.3s linear;
+}
+
+.card p {
+    font-size: 10px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.btnAction {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.btnAction span {
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    background-color: salmon;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+}
+
+.input{
+    width: 100%;
+}

@@ -1,0 +1,131 @@
+.cart {
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.clear {
+    position: absolute;
+    right: 5px;
+    margin-bottom: 30px;
+}
+
+.action_cart {
+    position: relative;
+    margin-top: 10px;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.content_cart {
+    margin-top: 100px;
+}
+
+.action_cart .price {
+    color: red;
+    position: absolute;
+    right: 5px;
+   
+  font-size: 11px;
+    margin-top: 10px;
+
+}
+
+.action_cart .title_cart {
+    position: absolute;
+    left: 60%;
+    font-size: 10px;
+    transform: translateX(-70%);
+    margin-top: 10px;
+}
+
+.action_cart img {
+    position: absolute;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.action button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    height: 30px;
+    text-align: center;
+    line-height: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.total {
+    margin-top: 50px;
+}
+
+.total span {
+    position: relative;
+    padding: 10px;
+}
+
+.order {
+    background-color: rgb(192, 232, 192);
+    padding: 10px;
+    color: black;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+
+.creat{
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+@media (min-width:320px) and (max-width:767px) {
+    .action {
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+    .action_cart .price{
+        margin-top: 30px;  
+    }
+    .action input {
+        width: 100%;
+       
+    }
+
+    .action_cart img {
+        display: block;
+        margin: auto;
+        position: relative;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .action_cart {
+        flex-direction: column;
+    }
+
+    .action_cart .title_cart {
+        position: relative;
+        margin-left: 30px;
+    }
+}
+
+@media (min-width:767px) and (max-width:1200px) {
+    .action_cart .title_cart {
+        
+        font-size: 8px;
+        width: 100px;
+        line-height: 8px;
+       margin-left: 30px;
+       /* top: -10px; */
+    }
+
+    .action_cart .price{
+        font-size: 11px;
+    }
+}

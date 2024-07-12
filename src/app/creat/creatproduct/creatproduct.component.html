@@ -1,0 +1,23 @@
+<h1>Add Product</h1>
+<form class="creat_form" [formGroup]="form">
+    <h5>Title</h5>
+    <input formControlName="title" class="form-control" type="text" />
+    <h5>Price</h5>
+    <input formControlName="price" class="form-control" type="number" />
+    <h5>Categories</h5>
+    <select class="form-control" (change)="filterproductByCategory($event)">
+        <option *ngFor="let cat of categores">{{cat}}</option>
+    </select>
+    <div>
+        <label for="creat" class="btn btn-secondary"> UPload </label>
+        <input (change)="GetImgPath($event)" id="creat" type="file" style="display:none;" />
+        <img class="upload_img" [src]="base64" alt="" />
+        <div>
+            <h5>Descrption</h5>
+            <textarea formControlName="description" class="form-control"></textarea>
+        </div>
+    </div>
+
+    <button [disabled]="!form.valid" (click)="AddNewProduct()" type="button" class="btn btn-warning w-100 mt-3">Add
+        Product</button>
+</form>
